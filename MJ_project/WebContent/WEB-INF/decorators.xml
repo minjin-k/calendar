@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+
+<decorators defaultdir="/decorator">
+	<decorator name="main" page="decorator.jsp">
+		<pattern>/model2/member/*</pattern>
+		<pattern>/model2/board/*</pattern>
+		<pattern>/model2/calendar/*</pattern>
+	</decorator>
+	<!-- layout 제외 설정 -->
+	<excludes>
+		<pattern>/model2/member/picture*</pattern>
+		<pattern>/model2/member/ajax*</pattern>
+		<pattern>/model2/calendar/*Cal*</pattern>
+	</excludes>
+</decorators>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.BoardMapper">
+	<select id="count" parameterType="map" resultType="int">
+		select count(*) from board
+		<if test="column != null and find != null">
+			where ${column} like '%${find}%'
+			<if test="col2 != null">
+				or ${col2} like '%${find}%'
+			</if>
+		</if>
+		<if test="code != null">
+			where code = ${code}
+		</if>
+	</select>
+	<select id="select" parameterType="map" resultType="Board">
+		select * from board
+		<if test="num != null">
+			where num = #{num}
+		</if>
+		<if test="column != null and find != null">
+			where ${column} like '%${find}%'
+			<if test="col2 != null">
+				or ${col2} like '%${find}%'
+			</if>
+		</if>
+		<if test="code != null">
+			where code = ${code}
+		</if>
+		<if test="start != null">
+			order by ref desc, refstep asc limit #{start},#{limit}
+		</if>
+	</select>
+</mapper>

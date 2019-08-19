@@ -1,0 +1,30 @@
+table {
+	width : 85%;
+	border-collapse: collapse;
+}
+th,td { border-bottom: 1px solid #c1c1c1;
+	text-align: center;
+	padding : 8px;
+	}
+th {background-color: darksalmon; color : white;}
+td {background-color:#ffffff;}
+caption {
+	color : #111111; font-size:20px;
+	background-color: #FFFFFF;
+}
+input[type=text],input[type=password],textarea {
+	width : 80%;
+}
+input[type=button],input[type=submit] {
+	w3-button; w3-teal; w3-rigth;
+}
+.login {
+	border: solid 0px #000000;
+	background-color:#ffffff;
+}
+.button {
+	border-radius: 5px; 
+	background-color: #de8f72;
+	color: white;
+	}
+	
