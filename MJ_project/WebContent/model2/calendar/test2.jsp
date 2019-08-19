@@ -18,10 +18,10 @@
 <script src="https://fullcalendar.io/releases/google-calendar/4.1.0/main.min.js"></script>
 <script src="https://fullcalendar.io/releases/google-calendar/4.1.0/main.min.js"></script>
 
-<!-- ÅÇ -->
+<!-- íƒ­ -->
 <script type="text/javascript">
 	$(document).ready(function(){	
-		$(".big1").show(); // ³»¿ë ¼û±è
+		$(".big1").show(); // ë‚´ìš© ìˆ¨ê¹€
 		$(".network").hide();
 		$(".smart").hide();
 		$(".big2").hide();
@@ -37,7 +37,7 @@
 		})
 		
 		$("#big1button").click(function() {
-			$('#calendar').fullCalendar('addEventSource', {title:'ÀÏÁ¤Ãß°¡¤Ì',start : '2019-05-11',end : '2019-05-15'});
+			$('#calendar').fullCalendar('addEventSource', {title:'ì¼ì •ì¶”ê°€ã…œ',start : '2019-05-11',end : '2019-05-15'});
 			$(".big1").toggle(); 
 			$(this).parent().addClass("leftselect");
 			$("#big1button").parent().removeClass("leftselect");
@@ -68,8 +68,8 @@
 			$("#gdbutton").parent().removeClass("leftselect");
 		})
 		$("#allbutton").click(function() {
-			$(".big1").toggle(); // È­¸é¿¡ Ãâ·Â
-			$(".network").toggle();  // È­¸é¿¡ ¼û±è
+			$(".big1").toggle(); // í™”ë©´ì— ì¶œë ¥
+			$(".network").toggle();  // í™”ë©´ì— ìˆ¨ê¹€
 			$(".smart").toggle();
 			$(".big2").toggle();
 			$(".c").toggle();
@@ -100,7 +100,7 @@
 	}
 </style>
 
-<!-- Ä¶¸°´õ -->
+<!-- ìº˜ë¦°ë” -->
  <script>
  
  document.addEventListener('DOMContentLoaded', function() {
@@ -110,11 +110,11 @@
 	 var calendar = new FullCalendar.Calendar(calendarEl, {
 	    plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list', 'googleCalendar' ],
 	    
-	    // ÀÏÁ¤ Å¬¸¯½Ã ÀÌº¥Æ® ¼³Á¤
+	    // ì¼ì • í´ë¦­ì‹œ ì´ë²¤íŠ¸ ì„¤ì •
 	    eventClick: function(info) {
 	        var eventObj = info.event;
 
-	        if (eventObj.url) { //urlÀÌ ¼³Á¤µÈ ÀÌº¥Æ®ÀÎ °æ¿ì
+	        if (eventObj.url) { //urlì´ ì„¤ì •ëœ ì´ë²¤íŠ¸ì¸ ê²½ìš°
 	          alert(
 	            'Clicked ' + eventObj.title + '.\n' +
 	            'Will open ' + eventObj.url + ' in a new tab'
@@ -123,15 +123,15 @@
 	          window.open(eventObj.url);
 
 	          info.jsEvent.preventDefault(); // prevents browser from following link in current tab.
-	        } else { // ÀÏÁ¤¸¸ µî·ÏµÈ ÀÌº¥Æ®ÀÎ °æ¿ì
+	        } else { // ì¼ì •ë§Œ ë“±ë¡ëœ ì´ë²¤íŠ¸ì¸ ê²½ìš°
 	          alert('Clicked ' + eventObj.title);
 	        }
 	      },
 	      
-		    timeZone: 'UTC', // °ãÄ¡´Â ÀÏÁ¤À» º¸±âÁÁ°Ô Á¤¸®ÇÏ±â À§ÇØ ¼³Á¤.
-		    eventLimit: true, // ´õ ¸¹Àº ÀÏÁ¤À» º¸±â À§ÇØ ¼³Á¤.
+		    timeZone: 'UTC', // ê²¹ì¹˜ëŠ” ì¼ì •ì„ ë³´ê¸°ì¢‹ê²Œ ì •ë¦¬í•˜ê¸° ìœ„í•´ ì„¤ì •.
+		    eventLimit: true, // ë” ë§ì€ ì¼ì •ì„ ë³´ê¸° ìœ„í•´ ì„¤ì •.
 		    
-	    selectable: true, //¼¿·¢Æ® °¡´É.
+	    selectable: true, //ì…€ë™íŠ¸ ê°€ëŠ¥.
 	    header: {
 	        left: 'title',
 			center: '',
@@ -139,26 +139,26 @@
 	    },
 	    
 	    locale: initialLocaleCode,
-	    googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE', //±¸±Û °øÈŞÀÏ »ç¿ëÀ» À§ÇÑ key°ª
+	    googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE', //êµ¬ê¸€ ê³µíœ´ì¼ ì‚¬ìš©ì„ ìœ„í•œ keyê°’
 
-	    // ¿ì¸®³ª¶ó °øÈŞÀÏ ¼³Á¤
+	    // ìš°ë¦¬ë‚˜ë¼ ê³µíœ´ì¼ ì„¤ì •
 	    eventSources: [
             {
                 googleCalendarId: 'ko.south_korea#holiday@group.v.calendar.google.com',
                 color: '#8C8C8C',
             },
          ],
-       //ÀÏÁ¤Ãß°¡
+       //ì¼ì •ì¶”ê°€
          events:[ 
              {
-                 title: '»õ·Î¿îÀÏÁ¤',
+                 title: 'ìƒˆë¡œìš´ì¼ì •',
                  start: '2019-05-01',
                  end: '2019-05-04',
                  color : '#86E57F'
                }
          ],
          
-		//¼¿·¢Æ® ±â´É
+		//ì…€ë™íŠ¸ ê¸°ëŠ¥
 	    select: function(info) {
 	      	var op = "width=550, height=680, left=750, top=150";
 		    open("addCalForm.do?s_date="+info.startStr+"&e_date="+info.endStr,"",op)
@@ -172,36 +172,36 @@
   </head>
 <body>
 <span class="buttons">
-	<a href="#" id="big1button" style="color: #86E57F">ºòµ¥ÀÌÅÍ°³¹ß</a>
+	<a href="#" id="big1button" style="color: #86E57F">ë¹…ë°ì´í„°ê°œë°œ</a>
 </span>
 <span class="buttons">
-	<a href="#" id="networkbutton" style="color: #B2EBF4">³×Æ®¿öÅ©</a>
+	<a href="#" id="networkbutton" style="color: #B2EBF4">ë„¤íŠ¸ì›Œí¬</a>
 </span>
 <span class="buttons">
-	<a href="#" id="smartbutton" style="color: #B5B2FF">½º¸¶Æ®À¥</a>
+	<a href="#" id="smartbutton" style="color: #B5B2FF">ìŠ¤ë§ˆíŠ¸ì›¹</a>
 </span>
 <span class="buttons">
-	<a href="#" id="big2button" style="color: #FFCC33">ºòµ¥ÀÌÅÍ</a>
+	<a href="#" id="big2button" style="color: #FFCC33">ë¹…ë°ì´í„°</a>
 </span>
 <span class="buttons">
-	<a href="#" id="cbutton" style="color: #FFA7A7">c¼¥</a>
+	<a href="#" id="cbutton" style="color: #FFA7A7">cìƒµ</a>
 </span>
 <span class="buttons">
 	<a href="#" id="gdbutton" style="color: #4641D9">GOODEE</a>
 </span>
 <span class="buttons">
-	<a href="#" id="allbutton" style="color: #8C8C8C">ÀüÃ¼</a>
+	<a href="#" id="allbutton" style="color: #8C8C8C">ì „ì²´</a>
 </span><br><br>
 		
 
-	<p class="big1" onChange="addEventSource">ºòµ¥ÀÌÅÍ°³¹ß¹İ ÀÏÁ¤
+	<p class="big1" onChange="addEventSource">ë¹…ë°ì´í„°ê°œë°œë°˜ ì¼ì •
 	</p>
-	<p class="network">³×Æ®¿öÅ©¹İ ÀÏÁ¤</p>
-	<p class="smart">½º¸¶Æ®À¥¹İ ÀÏÁ¤</p>
-	<p class="big2">ºòµ¥ÀÌÅÍ¹İ ÀÏÁ¤</p>
-	<p class="c">c¼¥ ¹İ ÀÏÁ¤</p>
-	<p class="gd">±¸µğ ÀüÃ¼ ÀÏÁ¤</p>
-	<p class="all">¸ğµç ÀÏÁ¤</p>
+	<p class="network">ë„¤íŠ¸ì›Œí¬ë°˜ ì¼ì •</p>
+	<p class="smart">ìŠ¤ë§ˆíŠ¸ì›¹ë°˜ ì¼ì •</p>
+	<p class="big2">ë¹…ë°ì´í„° ì¼ì •</p>
+	<p class="c">cìƒµ ë°˜ ì¼ì •</p>
+	<p class="gd">êµ¬ë”” ì „ì²´ ì¼ì •</p>
+	<p class="all">ëª¨ë“  ì¼ì •</p>
 
  <div id='calendar'></div>
 
